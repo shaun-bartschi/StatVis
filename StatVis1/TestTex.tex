@@ -1,0 +1,116 @@
+\documentclass[12pt,letterpaper,final]{article}
+
+%\documentstyle[12pt,graphicx,natbib,hyperref,Sweave,rotating]{article}
+
+\usepackage{Sweave}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{rotating}
+\usepackage{verbatim}
+\usepackage{textcomp}
+
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.15in}
+\setlength{\topmargin}{0.5in}
+\setlength{\textheight}{22cm}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\parskip}{5pt plus 2pt minus 3pt}
+
+\marginparwidth2cm
+\marginparsep0.2cm
+\marginparpush0.2cm
+%\tabcolsep0pt
+
+\def\thefootnote{\fnsymbol{footnote}}
+\setcounter{footnote}{1}
+
+\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\textfraction}{0.0}
+\renewcommand{\floatpagefraction}{1.0}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+
+% to get nice proofs ...
+\newcommand{\qedsymb}{\mbox{ }~\hfill~{\rule{2mm}{2mm}}}
+\newenvironment{proof}{\begin{trivlist}
+\item[\hspace{\labelsep}{\bf\noindent Proof: }]
+}{\qedsymb\end{trivlist}}
+
+\def\printindex{\input{\jobname.ind}}
+
+\newfont{\msymb}{cmsy10 scaled 1000}
+
+\def\nullset{\mbox{\O}}
+\def\R{{I\!\!R}}
+\def\N{{I\!\!N}}
+\def\C{{C\!\!\!\!I}}
+
+\def\convdist{\stackrel{d}{\longrightarrow}}
+\def\convlaw{\stackrel{L}{\longrightarrow}}
+\def\convweak{\stackrel{w}{\longrightarrow}}
+\def\convprob{\stackrel{p}{\longrightarrow}}
+\def\convmean#1{\stackrel{#1}{\longrightarrow}}
+\def\convas{\stackrel{a.s.}{\longrightarrow}}
+\def\convwp{\stackrel{w.p.1}{\longrightarrow}}
+
+\def\A{\mbox{\msymb A}}
+\def\B{\mbox{\msymb B}}
+\def\H{\mbox{\msymb H}}
+\def\P{\mbox{\msymb P}}
+\def\S{\mbox{\msymb S}}
+\def\X{\mbox{\msymb X}}
+\def\Y{\mbox{\msymb Y}}
+
+\def\u0{\underline{0}}
+\def\ua{\underline{a}}
+\def\ub{\underline{b}}
+\def\ud{\underline{d}}
+\def\ug{\underline{g}}
+\def\ueta{\underline{\eta}}
+\def\umu{\underline{\mu}}
+\def\utheta{\underline{\theta}}
+\def\uvartheta{\underline{\vartheta}}
+\def\UT{\underline{T}}
+\def\ut{\underline{t}}
+\def\UU{\underline{U}}
+\def\uu{\underline{u}}
+\def\OX{\overline{X}}
+\def\UX{\underline{X}}
+\def\ux{\underline{x}}
+\def\UY{\underline{Y}}
+\def\uy{\underline{y}}
+\def\UZ{\underline{Z}}
+\def\uz{\underline{z}}
+
+%\parskip 0.1in
+\pagenumbering{arabic}    %  Start using 1,2,... as page numbers.
+\pagestyle{plain}         %  Page numbers in middle bottom of page.
+%\setcounter{page}{80}  % XXXXXXXXXXXXXXXXX
+%\setcounter{theorem}{5} % XXXXXXXXXXXXXXXXX
+%\setcounter{definition}{10} % XXXXXXXXXXXXXXXXX
+
+\parindent 0in
+
+\makeindex
+\begin{document}
+\input{TestTex-concordance}
+
+Let's see what we can do here
+
+I can make maths.\\
+
+$$\int_0^(\infty}e^x dx$$
+
+
+\end{document}

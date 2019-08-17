@@ -1,0 +1,15 @@
+\contentsline {section}{Acknowledgements}{1}{section*.2}
+\contentsline {section}{\numberline {1}Univariate Plots}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Histograms}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Averaged Shifted Histograms}{13}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Stem--and--Leaf Plots}{17}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Boxplots (or Box--and--Whisker Plots)}{21}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Violin Plots}{24}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Letter Value Boxplots}{27}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}Dot Charts for Univariate Data}{31}{subsection.1.7}
+\contentsline {subsection}{\numberline {1.8}Kernel Density Plots for Univariate Data (with Rug Plot)}{45}{subsection.1.8}
+\contentsline {subsection}{\numberline {1.9}Quantile--Quantile Plots (Q--Q Plots)}{51}{subsection.1.9}
+\contentsline {subsection}{\numberline {1.10}Empirical Cumulative Distribution Functions (ECDFs)}{57}{subsection.1.10}
+\contentsline {subsection}{\numberline {1.11}Graphics and Small Sample Sizes}{60}{subsection.1.11}
+\contentsline {subsection}{\numberline {1.12}Further Reading}{65}{subsection.1.12}
+\contentsline {section}{References}{1}{subsection.1.12}

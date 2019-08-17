@@ -1,0 +1,15 @@
+\contentsline {section}{Acknowledgements}{1}{section*.2}
+\contentsline {section}{\numberline {1}Categorical Plots}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Which Plot Type to Choose?}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Categorical Plots in R}{4}{subsection.1.2}
+\contentsline {subsubsection}{\numberline {1.2.1}Pie Charts}{8}{subsubsection.1.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2}Bar Charts}{17}{subsubsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.3}Dot Plots / Dot Charts}{31}{subsubsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.4}Mosaic Plots}{46}{subsubsection.1.2.4}
+\contentsline {subsubsection}{\numberline {1.2.5}Spine Plots and Spinograms}{56}{subsubsection.1.2.5}
+\contentsline {subsection}{\numberline {1.3}Categorical Plots in Mondrian}{61}{subsection.1.3}
+\contentsline {subsubsection}{\numberline {1.3.1}Installation}{61}{subsubsection.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.2}The Titanic Data in Mondrian}{62}{subsubsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.3}The Titanic Data in iPlots}{64}{subsubsection.1.3.3}
+\contentsline {subsection}{\numberline {1.4}Further Reading}{67}{subsection.1.4}
+\contentsline {section}{References}{1}{subsection.1.4}

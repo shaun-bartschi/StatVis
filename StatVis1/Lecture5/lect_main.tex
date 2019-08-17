@@ -1,0 +1,258 @@
+\documentclass[12pt,letterpaper,final]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+
+%\documentstyle[12pt,graphicx,natbib,hyperref,Sweave,rotating]{article}
+
+\usepackage{Sweave}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{rotating}
+\usepackage{verbatim}
+\usepackage{textcomp}
+
+\setlength{\oddsidemargin}{0in}
+\setlength{\textwidth}{6.15in}
+\setlength{\topmargin}{0.5in}
+\setlength{\textheight}{22cm}
+\setlength{\headheight}{0in}
+\setlength{\headsep}{0in}
+\setlength{\parskip}{5pt plus 2pt minus 3pt}
+
+\marginparwidth2cm
+\marginparsep0.2cm
+\marginparpush0.2cm
+%\tabcolsep0pt
+
+\def\thefootnote{\fnsymbol{footnote}}
+\setcounter{footnote}{1}
+
+\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+
+\renewcommand{\topfraction}{1.0}
+\renewcommand{\bottomfraction}{1.0}
+\renewcommand{\textfraction}{0.0}
+\renewcommand{\floatpagefraction}{1.0}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+
+% to get nice proofs ...
+\newcommand{\qedsymb}{\mbox{ }~\hfill~{\rule{2mm}{2mm}}}
+\newenvironment{proof}{\begin{trivlist}
+\item[\hspace{\labelsep}{\bf\noindent Proof: }]
+}{\qedsymb\end{trivlist}}
+
+\def\printindex{\input{\jobname.ind}}
+
+\newfont{\msymb}{cmsy10 scaled 1000}
+
+\def\nullset{\mbox{\O}}
+\def\R{{I\!\!R}}
+\def\N{{I\!\!N}}
+\def\C{{C\!\!\!\!I}}
+
+\def\convdist{\stackrel{d}{\longrightarrow}}
+\def\convlaw{\stackrel{L}{\longrightarrow}}
+\def\convweak{\stackrel{w}{\longrightarrow}}
+\def\convprob{\stackrel{p}{\longrightarrow}}
+\def\convmean#1{\stackrel{#1}{\longrightarrow}}
+\def\convas{\stackrel{a.s.}{\longrightarrow}}
+\def\convwp{\stackrel{w.p.1}{\longrightarrow}}
+
+\def\A{\mbox{\msymb A}}
+\def\B{\mbox{\msymb B}}
+\def\H{\mbox{\msymb H}}
+\def\P{\mbox{\msymb P}}
+\def\S{\mbox{\msymb S}}
+\def\X{\mbox{\msymb X}}
+\def\Y{\mbox{\msymb Y}}
+
+\def\u0{\underline{0}}
+\def\ua{\underline{a}}
+\def\ub{\underline{b}}
+\def\ud{\underline{d}}
+\def\ug{\underline{g}}
+\def\ueta{\underline{\eta}}
+\def\umu{\underline{\mu}}
+\def\utheta{\underline{\theta}}
+\def\uvartheta{\underline{\vartheta}}
+\def\UT{\underline{T}}
+\def\ut{\underline{t}}
+\def\UU{\underline{U}}
+\def\uu{\underline{u}}
+\def\OX{\overline{X}}
+\def\UX{\underline{X}}
+\def\ux{\underline{x}}
+\def\UY{\underline{Y}}
+\def\uy{\underline{y}}
+\def\UZ{\underline{Z}}
+\def\uz{\underline{z}}
+
+%\parskip 0.1in
+\pagenumbering{arabic}    %  Start using 1,2,... as page numbers.
+\pagestyle{plain}         %  Page numbers in middle bottom of page.
+%\setcounter{page}{80}  % XXXXXXXXXXXXXXXXX
+%\setcounter{theorem}{5} % XXXXXXXXXXXXXXXXX
+%\setcounter{definition}{10} % XXXXXXXXXXXXXXXXX
+
+\parindent 0in
+
+\makeindex
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+\SweaveOpts{concordance=TRUE}
+
+
+\bibliographystyle{agsm}
+
+\begin{titlepage}
+\vspace*{4.5cm}
+\begin{center}
+{\LARGE \bf Stat 5810, Section 003} \\[0.5cm]
+{\LARGE \bf Statistical Visualization I} \\[0.5cm]
+{\LARGE \bf Fall 2018} \\[0.5cm]
+~ \\[2cm]
+{\bf Dr. J\"urgen Symanzik} \\[0.3cm]
+Utah State University \\[0.3cm]
+Department of Mathematics and Statistics \\[0.3cm]
+3900 Old Main Hill \\[0.3cm]
+Logan, UT 84322--3900 \\[0.8cm]
+Tel.: (435) 797--0696 \\[0.3cm]
+FAX: (435) 797--1822 \\[0.3cm]
+e-mail: \verb|symanzik@math.usu.edu| \\[0.3cm]
+Web: \url{http://www.math.usu.edu/~symanzik/}
+\end{center}
+
+\thispagestyle{empty}
+\vfill
+\end{titlepage}
+
+\newpage
+
+\thispagestyle{empty}
+
+\vspace*{5cm}
+
+\begin{figure}[ht]
+%\centering{\includegraphics[width=0.99\textwidth]{Scans//PhdcomicsCom_Plotting.jpg}}
+\caption{\label{PhdcomicsCom_Plotting}
+\url{http://www.phdcomics.com/comics/archive.php?comicid=1541}, \\
+Cartoon.
+}
+\end{figure}
+
+
+\newpage
+
+
+\setcounter{page}{1}
+
+\tableofcontents
+
+\newpage
+
+%~
+%
+%\newpage
+
+\SweaveInput{lect_acknow}
+\addcontentsline{toc}{section}{Acknowledgements}
+
+\newpage
+
+
+\setcounter{page}{1}
+
+\SweaveInput{lect_chapter0.Rnw}
+\SweaveInput{lect_chapter0_Unwin_IntroRgda-knitr_mod.Rnw}
+%\SweaveInput{lect_chapter11.Rnw}
+%\SweaveInput{lect_chapter4.Rnw}
+%\SweaveInput{lect_chapter5.Rnw}
+%\SweaveInput{lect_chapter6.Rnw}
+%\SweaveInput{lect_chapter1.Rnw}
+%
+%\SweaveInput{lect_chapter2.Rnw}
+%\SweaveInput{lect_chapter3.Rnw}
+%\SweaveInput{lect_chapter9.Rnw}
+%\SweaveInput{lect_chapter7.Rnw}
+%\SweaveInput{lect_chapter8.Rnw}
+%\SweaveInput{lect_chapter10.Rnw}
+
+
+\setcounter{page}{1}
+\addcontentsline{toc}{section}{References}
+
+\bibliography{references}
+
+
+\vspace*{1cm}
+
+\centering{\bf \LARGE --- THE END ---}~\\[1cm]
+
+\begin{figure}[ht]
+\centering{\includegraphics[height=3in]{Scans//Cartoonstock_FallingArrow.jpg}}
+\caption{\label{Cartoonstock_FallingArrow}
+\url{http://www.cartoonstock.com/blowup_stock.asp?imageref=vsh0184&artist=Shirvanian,+Vahan&topic=statistics+}, 
+Cartoon.
+}
+\end{figure}
+
+
+\end{document}
+

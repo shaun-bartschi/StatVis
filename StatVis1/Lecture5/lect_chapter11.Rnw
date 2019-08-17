@@ -1,0 +1,95 @@
+%% !Rnw root = lect_main.Rnw
+
+\def\jsprivatecheleven{1} % show additional details
+%\def\jsprivatecheleven{0} % do NOT show additional details
+
+
+\section{Graphics Galleries and Sources on the Web}
+
+
+\underline{\bf Graphics Galleries:}
+\begin{itemize}
+\item Michael Friendly's {\it Statistics and Statistical Graphics Resources}: \\
+\url{http://www.math.yorku.ca/SCS/StatResource.html}
+
+\item Romain Fran\c{c}ois' {\it R Graph Gallery}: \\
+\url{http://rgraphgallery.blogspot.com/} \\
+%\url{http://gallery.r-enthusiasts.com/}, \\
+\url{http://www.facebook.com/pages/R-Graph-Gallery/169231589826661}
+%\url{http://addictedtor.free.fr/graphiques/}
+
+\item Nicholas Lewin--Koh's {\it CRAN Task View: Graphic Displays \& Dynamic Graphics 
+\& Graphic Devices \& Visualization}: \\
+\url{http://cran.r-project.org/web/views/Graphics.html}
+
+\item Paul Murrell's R Graphics Web page, accompanying \cite{Mu2006}: \\
+\url{http://www.stat.auckland.ac.nz/~paul/RGraphics/rgraphics.html} (1st edition) \\
+\url{http://www.stat.auckland.ac.nz/~paul/RG2e/} (2nd edition)
+
+\item Wikibooks on {\it R Programming/Graphics}: \\
+\url{http://en.wikibooks.org/wiki/R_Programming/Graphics} 
+
+\end{itemize}
+
+
+\underline{\bf Social Data Analysis Web Sites:}
+\begin{itemize}
+\item NameVoyager - Baby Name Wizard of Most Popular Baby Names
+(Martin and Laura Wattenberg):
+\url{http://www.babynamewizard.com/voyager}
+
+\item StatCrunch (Webster West):
+\url{http://statcrunch.com/}
+
+\item Talks: Hans Rosling: Debunking Third--World Myths with the Best Stats You've Ever Seen
+(TED.com --- featured in Time, April 27, 2009, p.~44):
+\url{http://www.ted.com/index.php/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen.html};
+see \url{http://www.gapminder.org/} for more details and examples.
+Google required the rights and released a similar product, called Google Public Data Explorer,
+see \url{https://www.google.com/publicdata/directory}.
+
+\item Swivel:
+\url{http://www.swivel.com/} --- This Web site no longer exists, but there is
+an interview that describes the rise and fall of Swivel:
+\url{http://eagereyes.org/criticism/the-rise-and-fall-of-swivel}
+
+\item Many Eyes (IBM): 
+\url{http://many-eyes.com} --- This Web site no longer exists, but there is
+an article that looks back at it from a historical perspective:
+\url{https://www.computerworld.com/article/2930326/data-analytics/ibm-to-shutter-dataviz-pioneer-many-eyes.html}
+
+\end{itemize}
+
+
+\underline{\bf Statistical Computing and Statistical Graphics Sections:}
+\begin{itemize}
+\item Statistical Computing and Statistical Graphics Sections of
+the American Statistical Association (ASA) Home Page:
+\url{http://stat-computing.org/}
+
+\item Statistical Computing and Graphics Newsletter (with many graphics articles):
+\url{http://stat-computing.org/newsletter/}
+
+\item Statistical Graphics Video Library:
+\url{http://stat-graphics.org/movies/}
+
+\end{itemize}
+
+
+%\newpage
+
+
+~
+
+
+\begin{figure}[ht]
+\centering{\includegraphics[height=4in]{Scans//Cartoonstock_PrisonRetired.png}}
+\caption{\label{Cartoonstock_PrisonRetired}
+\url{http://www.cartoonstock.com/cartoonview.asp?start=7&search=main&catref=jcon3829&MA_Artist=&MA_Category=&ANDkeyword=statistics&ORkeyword=&TITLEkeyword=&NEGATIVEkeyword=}, 
+Cartoon.
+}
+\end{figure}
+
+
+\newpage
+

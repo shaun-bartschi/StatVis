@@ -1,0 +1,381 @@
+% !Rnw root = lect_main.Rnw
+
+\def\jsprivatechzero{1} % show additional details
+%\def\jsprivatechzero{0} % do NOT show additional details
+
+
+
+\section{Introduction}
+
+
+\subsection{Goals of the Course}
+
+The course answers three main questions: 
+\begin{itemize}
+\item Q: Why statistical graphics (and which ones to draw)? --- \\
+A: \cite{Un2015}, p.~xi, indicates that statistical graphics can be used for
+\begin{itemize}
+\item data cleaning
+\item exploring the data structure
+\item detecting outliers and unusual groups
+\item identifying trends and clusters
+\item spotting local patterns
+\item evaluating modeling output
+\item presenting results
+\item exploratory data analysis (EDA)
+\item data mining
+\end{itemize}
+
+Different types of graphics answer different questions. Often, we draw a large
+number of (different) graphics to better understand the full data set.
+
+
+\item Q: How to construct statistical graphics in R? --- \\
+A: Many R packages and supporting books exists, e.g.,
+\begin{itemize}
+\item baseR, see \cite{RCore2017}
+\item {\tt ggplot2}, see \cite{WiCh2016} and \cite{Wick2009}
+\item {\tt lattice}, see \cite{Sar2017} and \cite{Sar2008}
+\item general overview of R graphics, see \cite{Mu2006}
+\end{itemize}
+This course is not about a single R package, but rather introduces, uses, and compares
+a large number of R packages for various types of graphics.
+
+\item Q: How to distinguish between {\bf good} and {\bf bad} statistical graphics? --- \\
+A: see the next section for a first brief answer 
+\end{itemize}
+
+
+\subsection{Motivation: Bad Graphics}
+
+Statistical graphics and data visualization are critical 
+elements of modern data analysis and presentation.  From initial
+exploration of a data set to the final presentation of results to
+the end user, statistical graphics play a vital role in shaping our understanding
+of our data.  Through proper use of graphics, we can make critical
+discoveries, and communicate them clearly.  Conversely, poor use
+or misuse of graphics can seriously mislead (by accident or design).
+
+In the recent past, three examples that show the misuse of statistical graphics
+have been widely discussed --- in the statistical community and beyond.
+
+
+\newpage
+
+
+\underline{Example 1:}
+
+
+\begin{figure}[ht]
+\centering{\includegraphics[width=3.5in]{Scans//FoxNews_Bush-cuts2013.png}}
+\caption{\label{FoxNews_Bush-cuts2013}
+Figure taken from
+\url{http://flowingdata.com/2012/08/06/fox-news-continues-charting-excellence/}
+on 9/13/2017.
+}
+\end{figure}
+
+
+Based on this graphic (and without looking at the axis labels and percentages)
+how much higher would the top tax rate be if the Bush tax cuts were to expire
+at the end of 2012? Really ?!?!?
+
+
+\begin{figure}[ht]
+\centering{\includegraphics[width=2.0in]{Scans//FoxNews_Bush-cuts2013_corrected.png}}
+\caption{\label{FoxNews_Bush-cuts2013_corrected}
+Corrected figure taken from
+\url{http://flowingdata.com/2012/08/06/fox-news-continues-charting-excellence/}
+on 9/13/2017.
+}
+\end{figure}
+
+
+\newpage
+
+
+\underline{Example 2:}
+
+
+\begin{figure}[ht]
+\centering{\includegraphics[width=3.5in]{Scans//Obamacare1.pdf}}
+\caption{\label{Obamacare1}
+Figure taken from
+\url{https://www.mediamatters.org/blog/2014/03/31/dishonest-fox-charts-obamacare-enrollment-editi/198679}
+on 3/31/2014.
+}
+\end{figure}
+
+
+Based on this graphic (and without looking at the numbers in the graphic)
+how much of the target Obamacare enrollment has been reached 4 days prior to the 
+March 31 deadline? Really ?!?!?
+
+
+\begin{figure}[ht]
+\centering{\includegraphics[width=4.5in]{Scans//Obamacare2.jpg}}
+\caption{\label{Obamacare2}
+Corrected figure taken from \cite{HRS2014}, Figure~10, showing the ``tip of
+the iceberg'' of the bar chart.
+}
+\end{figure}
+
+
+\newpage
+
+
+\underline{Example 3:}
+
+
+\begin{figure}[ht]
+\centering{\includegraphics[width=3.8in]{Scans//PlannedParenthood1.jpg}}
+\caption{\label{PlannedParenthood1}
+Rep.\ Jason Chaffetz, R-Utah, projected this chart during a high-profile congressional hearing investigating Planned Parenthood.
+Figure taken from
+\url{http://www.politifact.com/truth-o-meter/statements/2015/oct/01/jason-chaffetz/chart-shown-planned-parenthood-hearing-misleading-/}
+on 10/12/2017.
+}
+\end{figure}
+
+What is Planned Parenthood mostly doing in 2013, according to Rep.\ Jason Chaffetz, R-Utah?
+Really ?!?!?
+
+\begin{figure}[ht]
+\centering{\includegraphics[width=5.5in]{Scans//PlannedParenthood2.jpg}}
+\caption{\label{PlannedParenthood1}
+Figure taken from
+\url{http://www.politifact.com/truth-o-meter/statements/2015/oct/01/jason-chaffetz/chart-shown-planned-parenthood-hearing-misleading-/}
+on 10/12/2017. 
+}
+\end{figure}
+
+
+\newpage
+
+
+\begin{figure}[ht]
+\centering{\includegraphics[width=5.0in]{Scans//PlannedParenthood3.png}}
+\caption{\label{PlannedParenthood1}
+Corrected figure taken from
+\url{http://www.politifact.com/truth-o-meter/statements/2015/oct/01/jason-chaffetz/chart-shown-planned-parenthood-hearing-misleading-/}
+on 10/12/2017. 
+}
+\end{figure}
+
+
+Politifact concluded: 
+\begin{quotation}
+``At the hearing, Chaffetz presented a chart that showed the number of abortions at Planned Parenthood rising higher than the number of preventive services and cancer screenings between 2006 and 2013.
+
+But that's inaccurate, disputed by the chart's own, hard to read numerical labels. In fact, there were three times as many cancer screenings and prevention services as abortions in 2013. Experts in data presentation said this was an egregious example of using a chart to mislead.
+
+We rate the claim Pants on Fire.''
+\end{quotation}
+
+
+\newpage
+
+
+\subsection{Motivation: Why Graphics ?!?}
+
+Why do we need graphics at all. Aren't summary statistics sufficient? 
+
+Start R and load the \citet{Ans73} data sets. Just type \verb|anscombe|
+and take a first glance at the data sets. What do you notice?
+<<>>=
+anscombe
+@
+
+Then calculate some summary statistics (separately for the 
+four columns of X's and Y's):
+mean of the X's, mean of the Y's, 
+standard deviation of the X's, standard deviation of the Y's,
+correlation coefficient,
+slope and intercept of the regression line, rms error.
+
+%\url{http://www.math.usu.edu/~symanzik/teaching/2015_stat6560/RDataAndScripts/Anscombe.R}
+
+<<>>=
+# calculate some summary statistics (separately for the 
+# four columns of X's and Y's)
+
+# mean of the X's
+mean(anscombe$x1)
+mean(anscombe$x2)
+mean(anscombe$x3)
+mean(anscombe$x4)
+
+# mean of the Y's
+mean(anscombe$y1)
+mean(anscombe$y2)
+mean(anscombe$y3)
+mean(anscombe$y4)
+
+# standard deviation of the X's
+sqrt(var(anscombe$x1))
+sqrt(var(anscombe$x2))
+sqrt(var(anscombe$x3))
+sqrt(var(anscombe$x4))
+
+# standard deviation of the Y's
+sqrt(var(anscombe$y1))
+sqrt(var(anscombe$y2))
+sqrt(var(anscombe$y3))
+sqrt(var(anscombe$y4))
+
+# correlation coefficient
+cor(anscombe$x1, anscombe$y1)
+cor(anscombe$x2, anscombe$y2)
+cor(anscombe$x3, anscombe$y3)
+cor(anscombe$x4, anscombe$y4)
+
+# slope of the regression line
+slope1 <- cor(anscombe$x1, anscombe$y1) * sqrt(var(anscombe$y1)) / 
+  sqrt(var(anscombe$x1))
+slope2 <- cor(anscombe$x2, anscombe$y2) * sqrt(var(anscombe$y2)) / 
+  sqrt(var(anscombe$x2))
+slope3 <- cor(anscombe$x3, anscombe$y3) * sqrt(var(anscombe$y3)) / 
+  sqrt(var(anscombe$x3))
+slope4 <- cor(anscombe$x4, anscombe$y4) * sqrt(var(anscombe$y4)) / 
+  sqrt(var(anscombe$x4))
+slope1
+slope2
+slope3
+slope4
+
+# intercept of the regression line
+intercept1 <- mean(anscombe$y1) - slope1 * mean(anscombe$x1)
+intercept2 <- mean(anscombe$y2) - slope2 * mean(anscombe$x2)
+intercept3 <- mean(anscombe$y3) - slope3 * mean(anscombe$x3)
+intercept4 <- mean(anscombe$y4) - slope4 * mean(anscombe$x4)
+intercept1
+intercept2
+intercept3
+intercept4
+
+# rms error
+rmserror1 <- sqrt(1 - cor(anscombe$x1, anscombe$y1)^2) * sqrt(var(anscombe$y1))
+rmserror2 <- sqrt(1 - cor(anscombe$x2, anscombe$y2)^2) * sqrt(var(anscombe$y2))
+rmserror3 <- sqrt(1 - cor(anscombe$x3, anscombe$y3)^2) * sqrt(var(anscombe$y3))
+rmserror4 <- sqrt(1 - cor(anscombe$x4, anscombe$y4)^2) * sqrt(var(anscombe$y4))
+rmserror1
+rmserror2
+rmserror3
+rmserror4
+@
+
+
+So, the four pairs of X/Y columns basically are identical !?!
+
+
+\if\jsprivatechzero 1
+But, didn't we forget to {\bf plot} the data !!! 
+
+%\url{http://www.math.usu.edu/~symanzik/teaching/2015_stat6560/RDataAndScripts/Anscombe2.R}
+
+<<fig=TRUE>>=
+# based on: http://pbil.univ-lyon1.fr/library/base/html/anscombe.html
+# extracted and adapted on 1/6/09
+
+##-- now some "magic" to do the 4 regressions in a loop: 
+ff <- y ~ x 
+class(ff)
+ff[1]
+ff[2]
+ff[3]
+
+for (i in 1:4) 
+{ 
+  ff[2:3] <- lapply(paste(c("y", "x"), i, sep = ""), as.name) 
+  assign(paste("lm.", i, sep = ""), lmi <- lm(ff, data = anscombe)) 
+} 
+lm.1
+
+## See how close they are (numerically!) 
+sapply(objects(pattern = "lm.[1-4]"), function(n) coef(get(n))) 
+lapply(objects(pattern = "lm.[1-4]"), function(n) summary(get(n))$coef) 
+
+## Now, do what you should have done in the first place: PLOTS 
+op <- par(mfrow = c(2, 2), mar = .1 + c(4, 4, 1, 1), oma = c(0, 0, 2, 0)) 
+
+for (i in 1:4) 
+{ 
+  ff[2:3] <- lapply(paste(c("y", "x"), i, sep = ""), as.name) 
+  plot(ff, data = anscombe, col = "red", pch = 21, bg = "orange", 
+       cex = 1.2, xlim = c(0, 20), ylim = c(2, 14)) 
+  abline(get(paste("lm.", i, sep = "")), col = "blue") 
+} 
+mtext("Anscombe's 4 Regression data sets", outer = TRUE, cex = 1.5) 
+par(op)
+@
+
+See here for additional references: \\
+\url{http://en.wikipedia.org/wiki/Anscombe's_quartet}
+%\url{http://pbil.univ-lyon1.fr/library/base/html/anscombe.html}
+
+
+\cite{Tu83}, p.~13, concludes: 
+\begin{quotation}
+``Graphics {\it reveal} data. Indeed graphics can be more precise and 
+revealing than conventional statistical computations. Consider
+Anscombe's quartet: all four of these data sets are described by 
+exactly the same linear model (at least until the residuals are 
+examined).''
+\end{quotation}
+
+The Anscombe data show up in numerous textbooks, as
+early as in \cite{Tu74}, pp.~131--134, and as recent as
+in \cite{MMC2012}, p.~120 (Exercise 2.73).
+In fact, this data set should be shown in every undergraduate
+class as well as in every regression class to demonstrate
+what might happen when blindly performing any statistical
+calculations without plotting the data first.
+
+
+\else
+{\bf Additional details will be provided after class.}
+\fi
+
+
+\newpage
+
+
+\subsection{Further Reading}
+
+In addition to \cite{Un2015}
+cited so far in this chapter, many other sources exist that
+make a strong case why to use graphics. 
+Some of these additional sources are:
+
+\begin{itemize}
+\item \cite{Ans73}
+
+\item \cite{Tuk77}
+
+\end{itemize}
+
+
+
+\begin{figure}[ht]
+\centering{\includegraphics[width=4.0in]{Scans//AmstatNews_Jan2009_p25_Fig.jpg}}
+\caption{\label{AmstatNews_Jan2009_p25_Fig}
+Amstat News, January 2009, p.~25, Cartoon.
+}
+\end{figure}
+
+
+\newpage
+
+
+%\begin{sidewaysfigure}
+%\begin{center}
+%\includegraphics[height=0.5\textwidth]{Scans//AmstatNews_Jan2009_p25_Fig.jpg}
+%\end{center}
+%\hspace{1.5in}\parbox{6in}{\caption{\label{AmstatNews_Jan2009_p25_Fig}
+%This is the rotated caption. This is the rotated caption. 
+%This is the rotated caption. This is the rotated caption. 
+%This is the rotated caption. This is the rotated caption.}}
+%\end{sidewaysfigure}
+
+
+

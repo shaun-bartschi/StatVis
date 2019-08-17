@@ -1,0 +1,41 @@
+% !Rnw root = lect_main.Rnw
+
+\section*{Acknowledgements}
+
+This course uses some of the course materials provided by
+Dr.\ Mike Minnotte (formerly USU, now with the University of
+North Dakota) as held in the Fall 2006 semester. Additional materials
+have been taken from other Statistical Graphics courses, such as the
+ones offered by Dr.\ Di Cook (formerly Iowa State University; now Monash University:
+\url{http://dicook.org/}) and
+Dr.\ Dan Carr (George Mason University: \url{http://mason.gmu.edu/~dcarr/}).
+Other examples and R code originate from 
+Heike Hofmann, Paul Murrell, Carson Sievert,
+Martin Theus, Antony Unwin, Simon Urbanek, 
+Hadley Wickham, Lee Wilkinson, and others.
+We are likely to include parts from additional authors and sources
+that will be specified later during the semester.
+
+Thanks are also due to 60+ students and guests who took 
+the former ``Stat 6560: Graphical Methods'' and
+the current ``Statistical Visualization I \& II'' courses
+with me since the Spring 2009 semester 
+for their valuable comments that helped
+to improve, correct, and extend these lecture notes.
+
+~\\
+J\"urgen Symanzik, September 10, 2018.
+
+
+%\begin{figure}[ht]
+%\centering{\includegraphics[width=3.5in]{Scans//Zelazny_px_Fig.jpg}}
+%\caption{\label{Zelazny_px_Fig}
+%\cite{Ze2001}, p.~x, Cartoon.
+%}
+%\end{figure}
+
+\newpage
+
+%~\\
+%
+%\newpage

@@ -1,0 +1,8 @@
+\documentclass{article}
+
+\begin{document}
+
+A simple test of Sweave
+
+
+\end{document}
